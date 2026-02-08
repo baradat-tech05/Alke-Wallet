@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet - Realiza tu Depósito</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/deposit.css"> 
+</head>
+<body>
+
+<div class="action-card">
+  <div class="side-panel">
+    <h2>Tu Balance</h2>
+    <p>Saldo actual disponible:</p>
+    <div id="displaySaldoActual" class="saldo-display">$0</div>
+    <p>Aumenta tus fondos de forma segura e inmediata.</p>
+  </div>
+
+  <div class="form-panel">
+    <h3>Realizar Depósito</h3>
+    
+    <div id="alert-container"></div>
+
+    <form id="depositForm">
+      <div class="form-group">
+        <label class="small font-weight-bold">Monto a cargar</label>
+        <input type="number" class="form-control" id="depositAmount" placeholder="Ej: 5000" required>
+      </div>
+
+      <p id="montoConfirmacion" class="text-center mt-2"></p>
+
+      <button type="button" id="btnRealizarDeposito" class="btn-action">
+        Confirmar Depósito
+      </button>
+
+      <a href="menuAlkeWallet.html" class="btn-back">
+        Volver al Menú Principal
+      </a>
+    </form>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="JavaScript/deposit.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+
+    :root {
+      --verde-oscuro: #1b4332;
+      --verde-billete: #2d6a4f;
+      --verde-fondo: #d8f3dc;
+      --amarillo: #e8d357;
+    }
+
+    body { 
+      background-color: var(--verde-fondo); 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+    /* Contenedor principal tipo App */
+    .app-container {
+      display: flex;
+      width: 850px;
+      height: 550px;
+      background: var(--amarillo);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    /* Lista de contactos */
+    .panel-contactos {
+      width: 40%;
+      background: linear-gradient(180deg, var(--verde-oscuro), var(--verde-billete));
+      color: white;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Formulario de Envío */
+    .panel-envio {
+      width: 60%;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Estilo lista de contactos */
+    .lista-scroll {
+      flex-grow: 1;
+      overflow-y: auto;
+      margin-top: 15px;
+    }
+
+    .contacto-item {
+      background: rgba(255,255,255,0.1);
+      padding: 10px;
+      margin-bottom: 8px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      border: 1px solid transparent;
+    }
+
+    .contacto-item:hover { background: rgba(255,255,255,0.2); }
+    
+    .seleccionado { 
+      background: var(--amarillo) !important; 
+      color: var(--verde-oscuro);
+      font-weight: bold;
+    }
+
+    /* Inputs y botones */
+    .form-control {background-color: lightgray; border-radius: 10px; border: none; padding: 25px; }
+    
+    .btn-enviar {
+      background: var(--verde-oscuro);
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      display: none; /* Se muestra al elegir contacto */
+    }
+
+    .btn-enviar:hover { background: #000; color: white; }

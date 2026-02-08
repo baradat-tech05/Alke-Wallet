@@ -1,0 +1,94 @@
+
+    :root {
+      --verde-oscuro: #1b4332;
+      --verde-billete: #2d6a4f;
+      --verde-fondo: #d8f3dc;
+      --amarillo: #e8d357;
+    }
+
+    body { 
+      background-color: var(--verde-fondo); 
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+    /* Contenedor principal */
+    .app-container {
+      display: flex;
+      width: 950px;
+      height: 600px;
+      background: var(--amarillo);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    }
+
+    /* Filtros y navegación */
+    .panel-lateral {
+      width: 30%;
+      background: linear-gradient(180deg, var(--verde-oscuro), var(--verde-billete));
+      color: #e8d357;
+      padding: 40px 25px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Lista de Movimientos */
+    .panel-historial {
+      width: 70%;
+      background:#e8d357;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Scroll filtros */
+    .lista-scroll {
+      flex-grow: 1;
+      overflow-y: auto;
+      margin-top: 20px;
+      padding-right: 10px;
+    }
+
+    /* Tarjetas de movimientos */
+    .movimiento-card {
+      background:white;
+      border: 1px solid #eee;
+      border-left: 6px solid var(--verde-billete);
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: transform 0.2s;
+    }
+    .movimiento-card:hover { transform: scale(1.01); background: #f8f9fa; }
+
+    /* Etiquetas e indicadores */
+    .badge-tipo {
+      font-size: 0.65rem;
+      font-weight: bold;
+      padding: 4px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+
+    /* Colores Ingreso Egreso */
+    .monto-positivo { color: #28a745; font-weight: bold; font-size: 1.1rem; }
+    .monto-negativo { color: #dc3545; font-weight: bold; font-size: 1.1rem; }
+
+    .btn-volver {
+      margin-top: auto;
+      background: var(--amarillo);
+      color: var(--verde-oscuro);
+      font-weight: bold;
+      text-align: center;
+      padding: 12px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+    .btn-volver:hover { background: white; color: var(--verde-oscuro); text-decoration: none; }

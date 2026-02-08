@@ -1,0 +1,112 @@
+
+    :root {
+      --dollar-deep: #1b4332;   /* Verde bosque */
+      --dollar-main: #2d6a4f;   /* Verde billete */
+      --dollar-soft: #d8f3dc;   /* Fondo verde suave */
+      --accent-yellow: #e8d357; /* Dorado suave */
+    }
+
+    body { 
+      background-color: var(--dollar-soft); 
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+    /* Tarjeta principal */
+    .action-card {
+      display: flex;
+      max-width: 900px;
+      width: 90%;
+      background: var(--accent-yellow);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+
+    /* Información de saldo */
+    .side-panel {
+      background: linear-gradient(135deg, var(--dollar-deep) 0%, var(--dollar-main) 100%);
+      color: white;
+      padding: 60px;
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .side-panel h2 { font-weight: 600; margin-bottom: 20px; }
+    .saldo-display { 
+      font-size: 2.5rem; 
+      font-weight: 600; 
+      margin: 15px 0;
+      color: var(--accent-yellow);
+    }
+    .side-panel p { opacity: 0.8; font-size: 0.9rem; }
+
+    /* Formulario de depósito */
+    .form-panel {
+      padding: 60px;
+      width: 55%;
+      background-color: #e8d357; 
+    }
+
+    .form-panel h3 {
+      color: var(--dollar-deep);
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    .form-control {
+      background:lightgray;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      padding: 12px 15px;
+      height: auto;
+      transition: 0.3s;
+    }
+
+    .form-control:focus {
+      border-color: var(--dollar-main);
+      background: white;
+      box-shadow: none;
+    }
+
+    .btn-action {
+      background: var(--dollar-main);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 12px;
+      font-weight: 600;
+      width: 100%;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    .btn-action:hover {
+      background: var(--dollar-deep);
+      transform: translateY(-2px);
+      color: white;
+      text-decoration: none;
+    }
+
+    .btn-back {
+      color: var(--dollar-main);
+      font-weight: 600;
+      text-align: center;
+      display: block;
+      margin-top: 15px;
+    }
+
+    /* Mensajes */
+    #montoConfirmacion { font-weight: bold; color: var(--dollar-main); display: none; }
+
+    @media (max-width: 768px) {
+      .action-card { flex-direction: column; height: auto; margin: 20px; }
+      .side-panel, .form-panel { width: 100%; padding: 30px; }
+    }

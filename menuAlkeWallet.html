@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet - Menu Principal</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/menu.css">
+  
+</head>
+<body>
+
+<div class="menu-card">
+  <div class="side-panel">
+    <h2>Saldo Disponible</h2>
+    <p>Gestiona tu dinero de forma segura</p>
+    <h3 id="saldoDisplay">$0</h3>
+  </div>
+
+  <div class="action-panel">
+    <h3>¿Qué deseas hacer?</h3>
+    
+    <div id="mensajeRedireccion" class="alert alert-info py-2" style="display: none;"></div>
+
+    <div class="menu-options">
+      <button id="btnDepositos" class="btn-action">Depósitos</button>
+      <button id="btnEnviar" class="btn-action">Enviar Dinero</button>
+      <button id="btnMovimientos" class="btn-action">Últimos Movimientos</button>
+      
+      <hr>
+      <button id="btnCerrarSesion" class="btn-logout">Cerrar Sesión</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="JavaScript/menu.js"></script>
+
+</body>
+</html>

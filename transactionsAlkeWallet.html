@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Wallet - Historial de Movimientos</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/transactions.css">
+  
+</head>
+<body>
+
+<div class="app-container">
+  
+  <div class="panel-lateral">
+    <h3>Mi Wallet</h3>
+    <p class="text-light opacity-75 small">Inspecciona tus transacciones recientes.</p>
+    
+    <div class="form-group mt-4">
+      <label class="small font-weight-bold">FILTRAR:</label>
+      <select id="filtroTipo" class="form-control filtro-select">
+        <option value="todos">Todos los movimientos</option>
+        <option value="Depósito">Depósitos</option>
+        <option value="Transferencia">Transferencias</option>
+      </select>
+    </div>
+        
+    <a href="depositAlkeWallet.html" class="btn-volver">Ir al Menú Principal</a>
+  </div>
+
+  <div class="panel-historial">
+    <div class="d-flex justify-content-between align-items-center">
+      <h2 style="color: var(--verde-oscuro)">Historial</h2>
+      <button id="btnLimpiar" class="btn btn-sm btn-outline-danger">Limpiar historial</button>
+    </div>
+    
+    <div id="listaMovimientos" class="lista-scroll">
+      </div>
+
+    <div id="mensajeVacio" class="text-center mt-5" style="display: none;">
+      <p class="text-muted">No tienes movimientos registrados.</p> 
+    </div>
+  </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="JavaScript/transactions.js"></script>
+
+</body>
+</html>

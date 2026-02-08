@@ -1,0 +1,118 @@
+
+    :root {
+      --dollar-deep: #1b4332;   /* Verde bosque */
+      --dollar-main: #2d6a4f;   /* Verde billete */
+      --dollar-soft: #d8f3dc;   /* Fondo verde suave */
+      --accent-gold: #e8d357;   /* Dorado del login */
+    }
+
+    body { 
+      background-color: var(--dollar-soft); 
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+    /* Tarjeta principal (Mismo estilo que el login) */
+    .menu-card {
+      display: flex;
+      text-align: center;
+      max-width: 900px;
+      width: 90%;
+      background-color: #e8d357; /* Fondo blanco para el área de botones */
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+
+    /* Info de Saldo */
+    .side-panel {
+      background: linear-gradient(135deg, var(--dollar-deep) 0%, var(--dollar-main) 100%);
+      color: white;
+      padding: 60px;
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .side-panel h2 { font-weight: 600; margin-bottom: 10px; }
+    .side-panel p { opacity: 0.8; font-size: 0.9rem; margin-bottom: 30px; }
+    
+    #saldoDisplay { 
+      font-size: 2.5rem; 
+      font-weight: 700; 
+      color: var(--accent-gold); 
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    /* Botones lado derecho */
+    .action-panel {
+      padding: 60px;
+      width: 55%;
+      background-color:#e8d357;
+    }
+
+    .action-panel h3 {
+      color: var(--dollar-deep);
+
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    /* Botones personalizados */
+    .btn-action {
+      background: var(--dollar-main);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 14px;
+      font-weight: 600;
+      width: 100%;
+      margin-bottom: 15px;
+      transition: 0.3s;
+      text-align: center;
+      display: block;
+    }
+
+    .btn-action:hover {
+      background: var(--dollar-deep);
+      transform: translateY(-2px);
+      color: white;
+      text-decoration: none;
+    }
+
+    .btn-logout {
+      background: transparent;
+      color: #dc3545;
+      border: 2px solid #dc3545;
+      border-radius: 10px;
+      padding: 10px;
+      font-weight: 600;
+      width: 100%;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    .btn-logout:hover {
+      background: #dc3545;
+      color: white;
+    }
+
+    #mensajeRedireccion {
+      border-radius: 10px;
+      border: none;
+      background-color: var(--accent-gold);
+      color: #333;
+    }
+
+    /* Media Query para dispositivos móviles */
+    @media (max-width: 768px) {
+      .menu-card { flex-direction: column; height: auto; margin: 20px 0; }
+      .side-panel, .action-panel { width: 100%; padding: 30px; }
+      body { height: auto; }
+    }

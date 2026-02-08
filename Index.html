@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alke Wallet - Login</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ <link rel="stylesheet" href="css/login.css">
+</head>
+  
+ 
+</head>
+<body>
+
+<div class="content-wrapper">
+  <div class="login-card">
+    <div class="side-panel">
+      <h2>Personal $ Wallet</h2>
+      <p>Transferencias con la seguridad del banco pero la rapidez de una App.</p>
+    </div>
+
+    <div class="form-panel">
+      <h3>Inicia Sesión</h3>
+      
+      <form id="loginForm">
+        <div class="form-group">
+          <label class="small font-weight-bold">Correo Electrónico</label>
+          <input type="email" class="form-control" id="emailInput" placeholder="admin@wallet.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="small font-weight-bold">Contraseña</label>
+          <input type="password" class="form-control" id="passwordInput" placeholder="1234" required>
+        </div>
+
+        <button type="submit" id="btnLogin" class="btn-login">
+          Ir a tu Personal Wallet
+        </button>
+        
+        <div id="mensajeError" class="alert alert-danger mt-3" style="display: none; border-radius: 10px;">
+          Credenciales incorrectas. Revisa tus datos.
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="JavaScript/login.js"></script>
+
+<footer>
+    <p>&copy; 2026 Jesus Baradat Alke Wallet | Todos los derechos reservados</p>
+</footer>
+</body>
+
+</html>
